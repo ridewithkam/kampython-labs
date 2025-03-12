@@ -1,4 +1,5 @@
 # sets time
+
 def make_set(data):
     if data is None:
         return []
