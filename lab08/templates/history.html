@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>History of Astronomy Picture of the Day</title>
+    <title>Astronomy Picture of the Day History</title>
     <style>
         body {
             font-family: 'Times New Roman', Times, serif;
@@ -23,22 +23,23 @@
             padding: 15px;
             font-size: 24px;
         }
+        img {
+            width: 80%;
+            max-height: 500px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .description {
+            margin-top: 20px;
+            font-size: 18px;
+        }
         .footer {
             margin-top: 40px;
             text-align: center;
         }
-        input[type="date"] {
-            padding: 10px;
-            font-size: 16px;
-        }
-        .result {
-            margin-top: 20px;
-            font-size: 18px;
-        }
-        .result img {
-            width: 80%;
-            max-height: 500px;
-            object-fit: cover;
+        a {
+            color: #4CAF50;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -48,20 +49,14 @@
     </div>
     
     <div class="container">
-        <h2>Enter a Date</h2>
-        <form action="history.html" method="GET">
-            <input type="date" name="date" min="1995-06-16" max="2025-12-31" required>
-            <button type="submit">Submit</button>
-        </form>
-
-        <div class="result">
-            <h3>APOD for Date: DATE_ENTERED</h3>
-            <img src="APOD_IMAGE_URL" alt="Astronomy Picture of the Day">
-            <p><strong>Description:</strong> APOD_DESCRIPTION</p>
-            <p><strong>Copyright:</strong> APOD_COPYRIGHT</p>
+        <h2>Picture for {{ date }}</h2>
+        <img src="{{ image_url }}" alt="Astronomy Picture of the Day">
+        <div class="description">
+            <p><strong>Description:</strong> {{ description }}</p>
+            <p><strong>Copyright:</strong> {{ copyright_info }}</p>
         </div>
-        
-        <a href="index.html">Back to Home Page!</a>
+
+        <a href="/">Go back to Home</a>
     </div>
 
     <div class="footer">
