@@ -1,0 +1,8 @@
+File: Assignment01/example.py
+Total lines of code: 0
+Imports: No imports found
+Classes: No classes found
+Functions: No functions found
+
+Docstrings:
+All functions and methods have type annotations.
